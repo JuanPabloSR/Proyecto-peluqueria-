@@ -35,8 +35,8 @@ function eventListeners() {
 
     // Muestra el resumen de la cita ( o mensaje de error en caso de no pasar la validación )
     mostrarResumen();
-
-
+   
+    
     // Almacena el nombre de la cita en el objeto
     nombreCita();
 
@@ -91,6 +91,9 @@ function cambiarSeccion() {
 
 async function mostrarServicios() {
     try {
+
+        const url = 'http://localhost:3000/servicios.php';
+
         const resultado = await fetch('./servicios.json');
         const db = await resultado.json();
 
